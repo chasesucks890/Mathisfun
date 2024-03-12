@@ -1,10 +1,10 @@
-const config = {
-  challenge: false, // Set to true if you want to enable password protection.
-  users: {
-    // You can add multiple users by doing username: 'password'.
-    interstellar: 'password',
-  },
-  routes: true, // Change this to false if you just want to host a bare server.
-  local: true, // Change this to false to disable local assets.
-}
-export default config
+self.__uv$config = {
+    prefix: '/a/',
+    bare: '/v/',
+    encodeUrl:  Ultraviolet.codec.xor.encode,
+    decodeUrl: Ultraviolet.codec.xor.decode,
+    handler: '/m/handler.js',
+    bundle: '/m/bundle.js',
+    config: '/m/config.js',
+    sw: '/m/sw.js?v=1',
+};
